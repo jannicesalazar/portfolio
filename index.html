@@ -1,312 +1,145 @@
 <!doctype html>
 <html lang="en" class="h-full">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to My Portfolio</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="/_sdk/element_sdk.js"></script>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(5deg); }
-    }
-    
-    @keyframes float-delayed {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-15px) rotate(-5deg); }
-    }
-    
-    @keyframes wiggle {
-      0%, 100% { transform: rotate(-3deg); }
-      50% { transform: rotate(3deg); }
-    }
-    
-    @keyframes sparkle {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
-    }
-    
-    @keyframes wave {
-      0% { transform: rotate(0deg); }
-      10% { transform: rotate(14deg); }
-      20% { transform: rotate(-8deg); }
-      30% { transform: rotate(14deg); }
-      40% { transform: rotate(-4deg); }
-      50% { transform: rotate(10deg); }
-      60% { transform: rotate(0deg); }
-      100% { transform: rotate(0deg); }
-    }
-    
-    @keyframes bounce-in {
-      0% { opacity: 0; transform: scale(0.3) translateY(50px); }
-      50% { transform: scale(1.05) translateY(-10px); }
-      70% { transform: scale(0.95) translateY(5px); }
-      100% { opacity: 1; transform: scale(1) translateY(0); }
-    }
-    
-    @keyframes slide-up {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    
-    .float-element { animation: float 4s ease-in-out infinite; }
-    .float-delayed { animation: float-delayed 5s ease-in-out infinite; }
-    .wiggle { animation: wiggle 2s ease-in-out infinite; }
-    .sparkle { animation: sparkle 2s ease-in-out infinite; }
-    .wave-hand { animation: wave 2.5s ease-in-out infinite; transform-origin: 70% 70%; display: inline-block; }
-    
-    .bounce-in { animation: bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; }
-    .slide-up { animation: slide-up 0.6s ease-out forwards; }
-    
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.2s; }
-    .delay-3 { animation-delay: 0.3s; }
-    .delay-4 { animation-delay: 0.4s; }
-    .delay-5 { animation-delay: 0.5s; }
-    
-    .cute-button {
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-    
-    .cute-button:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 10px 30px -10px rgba(255, 154, 162, 0.5);
-    }
-    
-    .cute-button:active {
-      transform: translateY(0) scale(0.98);
-    }
-    
-    .cute-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: left 0.5s ease;
-    }
-    
-    .cute-button:hover::before {
-      left: 100%;
-    }
-    
-    .blob {
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    
-    .blob-2 {
-      border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
-    }
-  </style>
-  <style>body { box-sizing: border-box; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
- </head>
- <body class="h-full">
-  <div id="app-wrapper" class="h-full w-full overflow-auto" style="background: linear-gradient(135deg, #fff5f5 0%, #fef3f8 25%, #f5f0ff 50%, #f0f7ff 75%, #f5fffa 100%);">
-   <!-- Floating decorative elements -->
-   <div class="fixed inset-0 pointer-events-none overflow-hidden">
-    <!-- Blobs -->
-    <div class="blob absolute w-64 h-64 opacity-30 float-element" style="background: linear-gradient(135deg, #FFB6C1, #FFC0CB); top: -5%; left: -5%;"></div>
-    <div class="blob-2 absolute w-48 h-48 opacity-25 float-delayed" style="background: linear-gradient(135deg, #B5EAD7, #C7F9CC); top: 10%; right: -3%;"></div>
-    <div class="blob absolute w-56 h-56 opacity-20 float-element" style="background: linear-gradient(135deg, #C9B1FF, #E0BBE4); bottom: 5%; left: 5%; animation-delay: -2s;"></div>
-    <div class="blob-2 absolute w-40 h-40 opacity-25 float-delayed" style="background: linear-gradient(135deg, #FFDAC1, #FFE5B4); bottom: 15%; right: 10%; animation-delay: -1s;"></div><!-- Sparkles -->
-    <div class="absolute text-2xl sparkle" style="top: 15%; left: 15%;">
-     ✨
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- SDK Scripts -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+</head>
+<body class="h-full">
+
+  <!-- App Wrapper -->
+  <div id="app-wrapper" class="h-full w-full overflow-auto" 
+       style="background: linear-gradient(135deg, #fff5f5 0%, #fef3f8 25%, #f5f0ff 50%, #f0f7ff 75%, #f5fffa 100%);">
+
+    <!-- Floating decorative elements -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+      <!-- Blobs -->
+      <div class="blob absolute w-64 h-64 opacity-30 float-element" 
+           style="background: linear-gradient(135deg, #FFB6C1, #FFC0CB); top: -5%; left: -5%;"></div>
+      <div class="blob-2 absolute w-48 h-48 opacity-25 float-delayed" 
+           style="background: linear-gradient(135deg, #B5EAD7, #C7F9CC); top: 10%; right: -3%;"></div>
+      <div class="blob absolute w-56 h-56 opacity-20 float-element" 
+           style="background: linear-gradient(135deg, #C9B1FF, #E0BBE4); bottom: 5%; left: 5%; animation-delay: -2s;"></div>
+      <div class="blob-2 absolute w-40 h-40 opacity-25 float-delayed" 
+           style="background: linear-gradient(135deg, #FFDAC1, #FFE5B4); bottom: 15%; right: 10%; animation-delay: -1s;"></div>
+
+      <!-- Sparkles -->
+      <div class="absolute text-2xl sparkle" style="top: 15%; left: 15%;">✨</div>
+      <div class="absolute text-xl sparkle" style="top: 25%; right: 20%; animation-delay: -0.5s;">⭐</div>
+      <div class="absolute text-2xl sparkle" style="bottom: 30%; left: 10%; animation-delay: -1s;">💫</div>
+      <div class="absolute text-xl sparkle" style="bottom: 20%; right: 15%; animation-delay: -1.5s;">✨</div>
+      <div class="absolute text-lg sparkle" style="top: 40%; left: 5%; animation-delay: -0.3s;">🌸</div>
+      <div class="absolute text-lg sparkle" style="top: 60%; right: 8%; animation-delay: -0.8s;">🌷</div>
     </div>
-    <div class="absolute text-xl sparkle" style="top: 25%; right: 20%; animation-delay: -0.5s;">
-     ⭐
-    </div>
-    <div class="absolute text-2xl sparkle" style="bottom: 30%; left: 10%; animation-delay: -1s;">
-     💫
-    </div>
-    <div class="absolute text-xl sparkle" style="bottom: 20%; right: 15%; animation-delay: -1.5s;">
-     ✨
-    </div>
-    <div class="absolute text-lg sparkle" style="top: 40%; left: 5%; animation-delay: -0.3s;">
-     🌸
-    </div>
-    <div class="absolute text-lg sparkle" style="top: 60%; right: 8%; animation-delay: -0.8s;">
-     🌷
-    </div>
-   </div><!-- Main content -->
-   <main class="relative z-10 min-h-full flex flex-col items-center justify-center px-6 py-12">
-    <div class="text-center max-w-2xl">
-     <!-- Cute avatar/icon -->
-     <div class="mb-8 bounce-in opacity-0" style="animation-delay: 0.1s;">
-      <div class="inline-block p-6 rounded-full shadow-lg wiggle overflow-hidden" style="background: linear-gradient(135deg, #FFE5EC, #FFF0F5); width: 160px; height: 160px;"><img src="https://www.caldwell.edu/wp-content/uploads/2023/11/ACADEMICS-6.jpg" alt="Jannice Salazar" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='#e5e7eb'; this.alt='Image unavailable';" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-      </div>
-     </div><!-- Greeting -->
-     <div class="bounce-in opacity-0" style="animation-delay: 0.3s;">
-      <p id="greeting-text" class="text-xl md:text-2xl mb-2" style="font-family: 'Quicksand', sans-serif; color: #FF9AA2;">Hello there! <span class="wave-hand">👋</span></p>
-     </div><!-- Name -->
-     <h1 class="bounce-in opacity-0" style="animation-delay: 0.5s;"><span class="block text-lg md:text-xl mb-2" style="font-family: 'Quicksand', sans-serif; font-weight: 500; color: #B5B5B5;">I'm</span> <span id="name-text" class="block text-5xl md:text-7xl font-bold bg-clip-text text-transparent" style="font-family: 'Quicksand', sans-serif; background: linear-gradient(135deg, #FF9AA2, #FFB7B2, #FFDAC1, #E2F0CB, #B5EAD7, #C7CEEA); background-size: 200% 200%; animation: gradient 5s ease infinite;"> Creative Dreamer </span></h1><!-- Tagline -->
-     <p id="tagline-text" class="mt-6 text-lg md:text-xl bounce-in opacity-0" style="font-family: 'Quicksand', sans-serif; font-weight: 500; color: #9B9B9B; animation-delay: 0.7s;">✨ Designer &amp; Developer crafting digital magic ✨</p><!-- Decorative divider -->
-     <div class="my-8 flex items-center justify-center gap-3 slide-up opacity-0" style="animation-delay: 0.9s;">
-      <span style="color: #FFB6C1;">♡</span>
-      <div class="w-16 h-0.5 rounded-full" style="background: linear-gradient(90deg, #FFB6C1, #B5EAD7);"></div><span style="color: #B5EAD7;">♡</span>
-      <div class="w-16 h-0.5 rounded-full" style="background: linear-gradient(90deg, #B5EAD7, #C7CEEA);"></div><span style="color: #C7CEEA;">♡</span>
-     </div><!-- CTA Button -->
-     <div class="slide-up opacity-0" style="animation-delay: 1.1s;">
-      <button id="cta-button" class="cute-button px-10 py-4 rounded-full text-white text-lg font-semibold shadow-xl" style="font-family: 'Quicksand', sans-serif; background: linear-gradient(135deg, #FF9AA2, #FFB7B2, #FFDAC1);"> <span class="relative z-10 flex items-center gap-2"> Enter my world 
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-        </svg></span> </button>
-     </div><!-- Social links hint -->
-     <div class="mt-12 flex items-center justify-center gap-6 slide-up opacity-0" style="animation-delay: 1.3s;">
-      <a href="https://www.instagram.com/jannicesalazar/" target="_blank" rel="noopener noreferrer" class="group p-3 rounded-full transition-all duration-300 hover:scale-110" style="background: rgba(255, 182, 193, 0.2);" aria-label="Instagram">
-       <svg class="w-6 h-6 transition-colors" style="color: #FF9AA2;" fill="currentColor" viewbox="0 0 24 24">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-       </svg></a> <a href="https://www.linkedin.com/in/jannicesalazar/" target="_blank" rel="noopener noreferrer" class="group p-3 rounded-full transition-all duration-300 hover:scale-110" style="background: rgba(199, 206, 234, 0.3);" aria-label="LinkedIn">
-       <svg class="w-6 h-6 transition-colors" style="color: #9BA3D0;" fill="currentColor" viewbox="0 0 24 24">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-       </svg></a>
-     </div>
-    </div>
-   </main>
+
+    <!-- Main Content -->
+    <main id="page-content" class="relative z-10 min-h-full flex flex-col items-center justify-center px-6 py-12">
+      <div class="text-center max-w-2xl">
+
+        <!-- Avatar -->
+        <div class="mb-8 bounce-in opacity-0" style="animation-delay: 0.1s;">
+          <div class="inline-block p-6 rounded-full shadow-lg wiggle overflow-hidden" 
+               style="background: linear-gradient(135deg, #FFE5EC, #FFF0F5); width: 160px; height: 160px;">
+            <img src="https://www.caldwell.edu/wp-content/uploads/2023/11/ACADEMICS-6.jpg" 
+                 alt="Jannice Salazar" loading="lazy" 
+                 onerror="this.style.background='#e5e7eb'; this.alt='Image unavailable';" 
+                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+          </div>
+        </div>
+
+        <!-- Greeting -->
+        <p id="greeting-text" class="text-xl md:text-2xl mb-2 bounce-in opacity-0" 
+           style="font-family: 'Quicksand', sans-serif; color: #FF9AA2; animation-delay: 0.3s;">
+          Hello there! <span class="wave-hand">👋</span>
+        </p>
+
+        <!-- Name -->
+<h1 class="bounce-in opacity-0" style="animation-delay: 0.5s;">
+  <span class="block text-lg md:text-xl mb-2" style="font-family: 'Quicksand', sans-serif; font-weight: 500; color: #070707;">I'm</span>
+  <span id="name-text" class="block text-2xl md:text-4xl font-bold bg-clip-text text-transparent"
+        style="font-family: 'Quicksand', sans-serif;
+               background: linear-gradient(270deg, #FF9AA2, #FFB7B2, #FFDAC1, #E2F0CB, #B5EAD7, #C7CEEA);
+               background-size: 1200% 1200%;
+               animation: gradient 10s ease infinite;">
+    Jannice Salazar
+  </span>
+</h1>
+
+<style>
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>
+        <!-- Tagline -->
+        <p id="tagline-text" class="mt-6 text-lg md:text-xl bounce-in opacity-0" 
+           style="font-family: 'Quicksand', sans-serif; font-weight: 500; color: #9B9B9B; animation-delay: 0.7s;">
+          ✨ Designer & Developer crafting digital magic ✨
+        </p>
+
+        <!-- Decorative Divider -->
+        <div class="my-8 flex items-center justify-center gap-3 slide-up opacity-0" style="animation-delay: 0.9s;">
+          <span style="color: #FFB6C1;">♡</span>
+          <div class="w-16 h-0.5 rounded-full" style="background: linear-gradient(90deg, #FFB6C1, #B5EAD7);"></div>
+          <span style="color: #B5EAD7;">♡</span>
+          <div class="w-16 h-0.5 rounded-full" style="background: linear-gradient(90deg, #B5EAD7, #C7CEEA);"></div>
+          <span style="color: #C7CEEA;">♡</span>
+        </div>
+
+<a href="portfolio.html">
+  <div class="slide-up opacity-0" style="animation-delay: 1.1s;">
+    <button id="cta-button" class="cute-button px-10 py-4 rounded-full text-white text-lg font-semibold shadow-xl"
+            style="font-family: 'Quicksand', sans-serif; background: linear-gradient(135deg, #FF9AA2, #FFB7B2, #FFDAC1);">
+      <span class="relative z-10 flex items-center gap-2">
+        Enter my world
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </span>
+    </button>
   </div>
-  <script>
-    const defaultConfig = {
-      greeting: "Hello there!",
-      name: "Jannice Salazar",
-      tagline: "✨ Designer & Developer crafting digital magic ✨",
-      button_text: "Enter my world",
-      background_color: "#fff5f5",
-      accent_color: "#FF9AA2",
-      text_color: "#9B9B9B",
-      button_color: "#FF9AA2",
-      secondary_color: "#B5EAD7",
-      font_family: "Quicksand",
-      font_size: 16
-    };
+</a>
+        <!-- Social Links -->
+<div class="mt-12 flex items-center justify-center gap-6 slide-up opacity-0" style="animation-delay: 1.3s;">
+  <a href="https://www.instagram.com/jannicesalazar/" target="_blank" rel="noopener noreferrer"
+     class="group p-3 rounded-full transition-all duration-300 hover:scale-110"
+     style="background: rgba(255, 182, 193, 0.2);" aria-label="Instagram">
+    <svg class="w-6 h-6 transition-colors" style="color: #FF9AA2;" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+  </a>
+  <a href="https://www.linkedin.com/in/jannicesalazar/" target="_blank" rel="noopener noreferrer"
+     class="group p-3 rounded-full transition-all duration-300 hover:scale-110"
+     style="background: rgba(199, 206, 234, 0.3);" aria-label="LinkedIn">
+    <svg class="w-6 h-6 transition-colors" style="color: #9BA3D0;" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+  </a>
+</div>
 
-    async function onConfigChange(config) {
-      const greetingEl = document.getElementById('greeting-text');
-      const nameEl = document.getElementById('name-text');
-      const taglineEl = document.getElementById('tagline-text');
-      const buttonEl = document.getElementById('cta-button');
-      const wrapper = document.getElementById('app-wrapper');
+      </div>
+    </main>
 
-      // Update text content
-      const greeting = config.greeting || defaultConfig.greeting;
-      greetingEl.innerHTML = `${greeting} <span class="wave-hand">👋</span>`;
-      
-      nameEl.textContent = config.name || defaultConfig.name;
-      taglineEl.textContent = config.tagline || defaultConfig.tagline;
-      
-      const buttonText = config.button_text || defaultConfig.button_text;
-      buttonEl.innerHTML = `<span class="relative z-10 flex items-center gap-2">${buttonText}<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg></span>`;
+  </div>
 
-      // Update colors
-      const bgColor = config.background_color || defaultConfig.background_color;
-      const accentColor = config.accent_color || defaultConfig.accent_color;
-      const textColor = config.text_color || defaultConfig.text_color;
-      const buttonColor = config.button_color || defaultConfig.button_color;
-      const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 
-      wrapper.style.background = `linear-gradient(135deg, ${bgColor} 0%, ${bgColor}f8 50%, ${bgColor}f0 100%)`;
-      greetingEl.style.color = accentColor;
-      taglineEl.style.color = textColor;
-      buttonEl.style.background = `linear-gradient(135deg, ${buttonColor}, ${buttonColor}dd, ${secondaryColor})`;
-
-      // Update fonts
-      const fontFamily = config.font_family || defaultConfig.font_family;
-      const fontSize = config.font_size || defaultConfig.font_size;
-      const fontStack = `${fontFamily}, sans-serif`;
-
-      greetingEl.style.fontFamily = fontStack;
-      nameEl.style.fontFamily = fontStack;
-      taglineEl.style.fontFamily = fontStack;
-      buttonEl.style.fontFamily = fontStack;
-
-      greetingEl.style.fontSize = `${fontSize * 1.25}px`;
-      taglineEl.style.fontSize = `${fontSize * 1.125}px`;
-      buttonEl.style.fontSize = `${fontSize * 1.125}px`;
-    }
-
-    function mapToCapabilities(config) {
-      return {
-        recolorables: [
-          {
-            get: () => config.background_color || defaultConfig.background_color,
-            set: (value) => { config.background_color = value; window.elementSdk.setConfig({ background_color: value }); }
-          },
-          {
-            get: () => config.secondary_color || defaultConfig.secondary_color,
-            set: (value) => { config.secondary_color = value; window.elementSdk.setConfig({ secondary_color: value }); }
-          },
-          {
-            get: () => config.text_color || defaultConfig.text_color,
-            set: (value) => { config.text_color = value; window.elementSdk.setConfig({ text_color: value }); }
-          },
-          {
-            get: () => config.accent_color || defaultConfig.accent_color,
-            set: (value) => { config.accent_color = value; window.elementSdk.setConfig({ accent_color: value }); }
-          },
-          {
-            get: () => config.button_color || defaultConfig.button_color,
-            set: (value) => { config.button_color = value; window.elementSdk.setConfig({ button_color: value }); }
-          }
-        ],
-        borderables: [],
-        fontEditable: {
-          get: () => config.font_family || defaultConfig.font_family,
-          set: (value) => { config.font_family = value; window.elementSdk.setConfig({ font_family: value }); }
-        },
-        fontSizeable: {
-          get: () => config.font_size || defaultConfig.font_size,
-          set: (value) => { config.font_size = value; window.elementSdk.setConfig({ font_size: value }); }
-        }
-      };
-    }
-
-    function mapToEditPanelValues(config) {
-      return new Map([
-        ["greeting", config.greeting || defaultConfig.greeting],
-        ["name", config.name || defaultConfig.name],
-        ["tagline", config.tagline || defaultConfig.tagline],
-        ["button_text", config.button_text || defaultConfig.button_text]
-      ]);
-    }
-
-    // Initialize SDK
-    if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange,
-        mapToCapabilities,
-        mapToEditPanelValues
-      });
-    }
-
-    // Add gradient animation keyframes
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes gradient {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-    `;
-    document.head.appendChild(style);
-
-    // Button click interaction
-    document.getElementById('cta-button').addEventListener('click', function() {
-      this.innerHTML = `<span class="relative z-10 flex items-center gap-2">Coming soon! 🎉</span>`;
-      setTimeout(() => {
-        const buttonText = (window.elementSdk?.config?.button_text) || defaultConfig.button_text;
-        this.innerHTML = `<span class="relative z-10 flex items-center gap-2">${buttonText}<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg></span>`;
-      }, 2000);
-    });
-  </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d51cddaf26f8da3',t:'MTc3MjMwMTQ0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
