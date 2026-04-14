@@ -1,3 +1,14 @@
+/* 🌈 GLOBAL APP LAYOUT */
+.app-background {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff5f5 0%, #fef3f8 25%, #f5f0ff 50%, #f0f7ff 75%, #f5fffa 100%);
+}
+
+.app-container {
+  position: relative;
+  z-index: 10;
+}
+
 /* 🌸 GLOBAL RESET */
 * {
   box-sizing: border-box;
@@ -152,4 +163,17 @@
 
 #page-content {
   will-change: opacity, transform;
+}
+
+#name-text {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+
+  background: linear-gradient(270deg, #FF9AA2, #FFB7B2, #FFDAC1, #B5EAD7);
+  background-size: 300% 300%;
+  animation: gradient 6s ease infinite;
+  
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
