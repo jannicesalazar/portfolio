@@ -1,135 +1,148 @@
-<div class="app-background">
-  <div class="app-container">
-    <!-- all content -->
 <!doctype html>
 <html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- SDK Scripts -->
-  <script src="/_sdk/element_sdk.js"></script>
-  <script src="/_sdk/data_sdk.js"></script>
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+    }
+  </style>
 </head>
-<body class="h-full">
 
-  <!-- App Wrapper -->
-  <div id="app-wrapper" class="h-full w-full overflow-auto" 
-       style="background: linear-gradient(135deg, #fff5f5 0%, #fef3f8 25%, #f5f0ff 50%, #f0f7ff 75%, #f5fffa 100%);">
+<body class="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 text-gray-800">
 
-    <!-- Floating decorative elements -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden">
-      <!-- Blobs -->
-      <div class="blob absolute w-64 h-64 opacity-30 float-element" 
-           style="background: linear-gradient(135deg, #FFB6C1, #FFC0CB); top: -5%; left: -5%;"></div>
-      <div class="blob-2 absolute w-48 h-48 opacity-25 float-delayed" 
-           style="background: linear-gradient(135deg, #B5EAD7, #C7F9CC); top: 10%; right: -3%;"></div>
-      <div class="blob absolute w-56 h-56 opacity-20 float-element" 
-           style="background: linear-gradient(135deg, #C9B1FF, #E0BBE4); bottom: 5%; left: 5%; animation-delay: -2s;"></div>
-      <div class="blob-2 absolute w-40 h-40 opacity-25 float-delayed" 
-           style="background: linear-gradient(135deg, #FFDAC1, #FFE5B4); bottom: 15%; right: 10%; animation-delay: -1s;"></div>
-
-      <!-- Sparkles -->
-      <div class="absolute text-2xl sparkle" style="top: 15%; left: 15%;">✨</div>
-      <div class="absolute text-xl sparkle" style="top: 25%; right: 20%; animation-delay: -0.5s;">⭐</div>
-      <div class="absolute text-2xl sparkle" style="bottom: 30%; left: 10%; animation-delay: -1s;">💫</div>
-      <div class="absolute text-xl sparkle" style="bottom: 20%; right: 15%; animation-delay: -1.5s;">✨</div>
-      <div class="absolute text-lg sparkle" style="top: 40%; left: 5%; animation-delay: -0.3s;">🌸</div>
-      <div class="absolute text-lg sparkle" style="top: 60%; right: 8%; animation-delay: -0.8s;">🌷</div>
-    </div>
-
-    <!-- Main Content -->
-    <main id="page-content" class="relative z-10 min-h-full flex flex-col items-center justify-center px-6 py-12">
-      <div class="text-center max-w-2xl">
-
-<style>
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-</style>
-
-<section class="project-block">
+<main class="max-w-4xl mx-auto px-6 py-16">
 
   <!-- TITLE -->
-  <h1 class="text-4xl font-bold mb-4">Touch-Based Coding App</h1>
-  <p class="text-gray-500 mb-8">
-    A UX exploration into making coding more intuitive through touch interaction.
-  </p>
+  <header class="text-center mb-12">
+    <h1 class="text-4xl font-bold mb-3">Touch-Based Coding App</h1>
+    <p class="text-gray-600">
+      Project Type: Research study + mobile app prototype<br>
+      My Role: UX/UI Designer (front-end design and prototyping)<br>
+      Team: Collaborated with a classmate responsible for backend development
+    </p>
+  </header>
 
-  <!-- OVERVIEW IMAGE (poster or main visual) -->
-  <img src="presentation.png" alt="Project Poster" class="rounded-xl shadow-lg mx-auto mb-10">
-  <!-- Decorative Divider -->
-        <div class="my-8 flex items-center justify-center gap-3 slide-up opacity-0" style="animation-delay: 0.9s;">
-          <span style="color: #FFB6C1;">♡</span>
-          <div class="w-16 h-0.5 rounded-full" style="background: linear-gradient(90deg, #FFB6C1, #B5EAD7);"></div>
-          <span style="color: #B5EAD7;">♡</span>
-          <div class="w-16 h-0.5 rounded-full" style="background: linear-gradient(90deg, #B5EAD7, #C7CEEA);"></div>
-          <span style="color: #C7CEEA;">♡</span>
-        </div>
-      </div>
-    </main>
+  <!-- INTRO / BACKGROUND (UNCHANGED CONTENT) -->
+  <section class="bg-white/70 backdrop-blur-md rounded-2xl p-8 shadow-sm mb-8 space-y-4 leading-relaxed">
 
-  </div>
+    <p>
+      This project explored the design of a mobile app that allows users to code without a computer,
+      using different interaction methods to understand which is the most efficient and intuitive for beginners.
+    </p>
+
+    <p>
+      We specifically designed and tested three coding interaction models:
+    </p>
+
+    <p>
+      Python (typing method): traditional text-based coding using a keyboard<br>
+      Scratch (dragging method): block-based coding using drag-and-drop interactions<br>
+      Touch method (our design): a coding system designed for mobile devices
+    </p>
+
+    <p>
+      The main focus of the study was to compare these three approaches in terms of task completion speed
+      and usability, especially in a mobile-first environment where traditional coding methods are less accessible.
+    </p>
+
+    <p>
+      Goal:<br>
+      To determine whether a touch-based coding interface could allow users to code faster and more intuitively
+      than typing (Python) and dragging (Scratch), particularly in a mobile app environment.
+    </p>
+
+    <p>
+      Target Users:<br>
+      Beginner or aspiring programmers who want to learn or write code but may not have access to a computer
+      or find traditional coding environments difficult to use.
+    </p>
+
+    <p>
+      Tools Used:<br>
+      Figma (UI/UX design and interactive prototyping)<br>
+      Google Forms (user testing and feedback collection)<br>
+      Google Sheets (organizing and analyzing test results)
+    </p>
+
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="my-10 text-center text-pink-300">♡ ♡ ♡</div>
 
   <!-- PROBLEM -->
-  <h3>Problem</h3>
-  <p>
-    Traditional coding environments can feel overwhelming for beginners.
-    I explored how touch-based interaction could make coding more accessible and intuitive.
-  </p>
+  <section class="bg-white/70 backdrop-blur-md rounded-2xl p-8 shadow-sm mb-8">
+    <h2 class="text-xl font-semibold mb-4">Problem</h2>
 
-  <!-- WIREFRAMES -->
-  <h3>Wireframes</h3>
-  <img src="wireframe1.png" class="project-img">
-  <img src="wireframe2.png" class="project-img">
-  <img src="wireframe3.png" class="project-img">
+    <p class="leading-relaxed">
+      Coding is traditionally designed around structured input methods such as typing or drag-and-drop interactions.
+      While these approaches are effective in desktop environments, they can still present challenges for beginners
+      in terms of speed, usability, and ease of interaction—especially when transitioning to mobile or more flexible learning environments.
+      <br><br>
+      Python (text-based coding) requires users to type syntax accurately, which can slow down beginners and increase cognitive load.
+      Scratch (drag-and-drop coding) reduces syntax barriers by allowing users to visually construct logic, but it can still feel slow
+      and less fluid for rapid task completion due to repeated dragging and arranging of blocks.
+      <br><br>
+      This creates an opportunity to explore alternative interaction models that may better support speed and intuitiveness in coding tasks.
+      <br><br>
+      This project investigates whether a touch-based coding interface within a mobile app environment can improve task completion speed
+      and usability compared to traditional typing (Python) and drag-and-drop (Scratch) methods.
+    </p>
+  </section>
 
   <!-- RESEARCH -->
-  <h3>User Research</h3>
-  <p>
-    I conducted surveys and evaluations to understand how users interact
-    with early prototypes and what challenges they face.
-  </p>
+  <section class="bg-white/70 backdrop-blur-md rounded-2xl p-8 shadow-sm mb-8">
+    <h2 class="text-xl font-semibold mb-4">Research and Methodology</h2>
 
-  <!-- REFLECTION -->
-  <h3>Reflection</h3>
-  <p>
-    This project helped me understand the importance of iteration, feedback,
-    and designing for accessibility and ease of use.
-  </p>
+    <p class="leading-relaxed mb-4">
+      To evaluate speed and usability across different coding interaction methods, I designed and tested three interactive prototypes:
+    </p>
 
-</section>
-        <!-- Decorative Divider -->
-        <div class="my-8 flex items-center justify-center gap-3 slide-up opacity-0" style="animation-delay: 0.9s;">
-          <span style="color: #FFB6C1;">♡</span>
-          <div class="w-16 h-0.5 rounded-full" style="background: linear-gradient(90deg, #FFB6C1, #B5EAD7);"></div>
-          <span style="color: #B5EAD7;">♡</span>
-          <div class="w-16 h-0.5 rounded-full" style="background: linear-gradient(90deg, #B5EAD7, #C7CEEA);"></div>
-          <span style="color: #C7CEEA;">♡</span>
-        </div>
-      </div>
-    </main>
+    <p class="mb-4">
+      Block-based prototype (Scratch-style): drag-and-drop system<br>
+      Text-based prototype (Python-style): traditional coding interface<br>
+      Touch-based prototype (final design): mobile-first touch interaction model
+    </p>
 
-  </div>
+    <p class="mb-4">
+      All prototypes were designed to test the same core programming tasks while varying only the interaction method.
+    </p>
 
-  <!-- Custom JS -->
-  <script src="script.js"></script>
+    <p class="mb-4">
+      The touch-based coding prototype was informed by Python’s logical structure, but redesigned for mobile interaction.
+    </p>
+
+    <p class="mb-4">
+      Ethical Approval:<br>
+      An IRB proposal was submitted and approved prior to testing.
+    </p>
+
+    <p class="mb-4">
+      Testing Approach:<br>
+      Participants completed identical coding tasks using each prototype.
+    </p>
+
+    <p>
+      Data Collection included task completion time, usability feedback, and observational notes.
+    </p>
+  </section>
+
+  <!-- REFLECTION (LEFT AS IS BUT MINIMAL) -->
+  <section class="bg-white/70 backdrop-blur-md rounded-2xl p-8 shadow-sm">
+    <h2 class="text-xl font-semibold mb-4">Reflection</h2>
+    <p>
+      This project helped me understand the importance of iteration, feedback,
+      and designing for accessibility and ease of use.
+    </p>
+  </section>
+
+</main>
 
 </body>
 </html>
-
-  </div>
-</div>
